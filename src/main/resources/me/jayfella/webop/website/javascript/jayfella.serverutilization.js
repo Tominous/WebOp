@@ -1,5 +1,5 @@
 var serverUtilizationChart;
-// var chunksAndEntitiesChart;
+ var chunksAndEntitiesChart;
 
 $(document).ready(function() 
 {
@@ -22,7 +22,7 @@ $(document).ready(function()
             { name: "Tick Rate", type: 'spline', data: [], color: '#ee4444', unit: 'TPS' }]
     });
 
-    /* chunksAndEntitiesChart = new Highcharts.Chart(
+     chunksAndEntitiesChart = new Highcharts.Chart(
     {
         chart: { renderTo: 'chunksAndEntitiesGraph', animation: { duration: 1000 } },
         credits: { enabled: false },
@@ -36,7 +36,7 @@ $(document).ready(function()
         series:[
             { name: "Chunks", type: 'area', data: [], color: '#65553a', unit: ' chunks' },
             { name: "Entities", type: 'area', data: [], color: '#45653a', unit: ' entities' }]
-    }); */
+    }); 
     
 });
 
@@ -76,13 +76,13 @@ function parseServerUtilization(message)
         }
         else if (serverUtilizationRespData[0] === "CHUNKS")
         {
-            // var y = parseFloat(serverUtilizationRespData[1], 10);
-            // chunksAndEntitiesChart.series[0].addPoint([x, y], false, shiftUp);
+             var y = parseFloat(serverUtilizationRespData[1], 10);
+             chunksAndEntitiesChart.series[0].addPoint([x, y], false, shiftUp);
         }
         else if (serverUtilizationRespData[0] === "ENTITIES")
         {
-            // var y = parseFloat(serverUtilizationRespData[1], 10);
-            // chunksAndEntitiesChart.series[1].addPoint([x, y], true, shiftUp);
+             var y = parseFloat(serverUtilizationRespData[1], 10);
+             chunksAndEntitiesChart.series[1].addPoint([x, y], true, shiftUp);
         }
     }
     
