@@ -483,7 +483,7 @@ public class ConsoleMonitor extends SocketSubscription {
             return false;
         }
     }
-    /*private class ConsoleLogHandler extends Handler
+    private class ConsoleLogHandler extends Handler
     {
         @Override
         public synchronized void publish(final LogRecord record) {
@@ -545,5 +545,5 @@ public class ConsoleMonitor extends SocketSubscription {
             }
             return string;
         }
-    }*/
+    }
 }
