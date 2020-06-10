@@ -273,7 +273,7 @@ public class MyWebSocket {
                 iterator.remove();
             }
         }
-        /*final StringBuilder errorMessage = new StringBuilder().append("WebSocket Closed. Code: ").append(statusCode);
+        final StringBuilder errorMessage = new StringBuilder().append("WebSocket Closed. Code: ").append(statusCode);
         if (reason != null && !reason.isEmpty()) {
             errorMessage.append(", Reason: ").append(reason);
         } else {
@@ -283,7 +283,7 @@ public class MyWebSocket {
             WebOpPlugin.PluginContext.getPlugin().getLogger().log(Level.INFO, closedUser.getName() + "'s " + errorMessage.toString());
         } else {
             WebOpPlugin.PluginContext.getPlugin().getLogger().log(Level.INFO, errorMessage.toString());
-        }*/
+        }
     }
 
     @OnWebSocketError
