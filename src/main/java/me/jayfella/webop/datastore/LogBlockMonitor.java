@@ -10,7 +10,7 @@ import java.util.List;
 public class LogBlockMonitor {
     public List<String> LookupGeneralDestroyedOre(final String player, final String block, final String sinceMins) {
         final List<String> results = new ArrayList<String>();
-        /*final LogBlock lbPlugin = (LogBlock)WebOp3Plugin.PluginContext.getPlugin().getServer().getPluginManager().getPlugin("LogBlock");
+        final LogBlock lbPlugin = (LogBlock)WebOp3Plugin.PluginContext.getPlugin().getServer().getPluginManager().getPlugin("LogBlock");
         final QueryParams lbQuery = new QueryParams(lbPlugin);
         final SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         final int sinceVal = Integer.valueOf(sinceMins);
@@ -40,7 +40,7 @@ public class LogBlockMonitor {
                 }
             }
             catch (SQLException ex) {}
-        }*/
+        }
         return results;
     }
 }
